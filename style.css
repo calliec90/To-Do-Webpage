@@ -47,7 +47,11 @@ body {
 }
 
 .todo-container {
-  margin-top: 30px;
+  margin-top: 25px;
+}
+
+.todo-item-container {
+  margin-top: 5px;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);

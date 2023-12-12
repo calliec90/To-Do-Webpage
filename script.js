@@ -1,11 +1,27 @@
 const todoList = [];
 
+function createToDoHTML(i, text) {
+  const button = `<div class="delete-btn">
+    <i class="fa-solid fa-xmark"></i>
+  </div>`;
+  const html = `<div class="todo-item-container" key=${i}>
+      <div class="todo-text"> ${text} </div>
+      ${button}
+    </div>`;
+  $(document).ready(function () {
+    $(".delete-btn").click(function () {
+      alert("The paragraph was clicked.");
+    });
+  });
+  return html;
+}
+
 //render text to page, loop through array
 function renderTodoList(todo) {
   let todoListHTML = "";
   for (let i = 0; i < todoList.length; i++) {
     const todo = todoList[i];
-    const html = `<div>${todo.text}</div>`;
+    const html = createToDoHTML(i, todo.text);
     todoListHTML += html;
   }
   document.querySelector(".js-todo-list").innerHTML = todoListHTML;
@@ -19,8 +35,6 @@ function addTodo(text) {
     text,
     //toggle to true when complete
     complete: false,
-    //generate unique id so the todo can be located in the array and removed
-    uniqueId: Date.now(),
   };
   todoList.push(todo);
   renderTodoList(todo);
