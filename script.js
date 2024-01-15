@@ -1,16 +1,18 @@
 const todoList = [];
 
 function createToDoHTML(i, text) {
-  const button = `<div class="delete-btn">
+  const button = `<div class="delete-btn js-delete-btn">
     <i class="fa-solid fa-xmark"></i>
   </div>`;
   const html = `<div class="todo-item-container" key=${i}>
       <div class="todo-text"> ${text} </div>
       ${button}
     </div>`;
-  $(document).ready(function () {
+
+  //delete item
+  $(document).ready(function (index) {
     $(".delete-btn").click(function () {
-      alert("The paragraph was clicked.");
+      $(this).parent().remove();
     });
   });
   return html;
@@ -52,4 +54,6 @@ form.addEventListener("submit", (event) => {
   const text = input.value;
   //pass "text" to addTodo() function
   addTodo(text);
+  //clear text
+  input.value = "";
 });

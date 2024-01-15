@@ -3,38 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
-    <!--JQUERY-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!--FONT AWESOME-->
+    <!--FONTS-->
     <script
-      src="https://kit.fontawesome.com/0426d0f4d2.js"
-      crossorigin="anonymous"
+    src="https://kit.fontawesome.com/0426d0f4d2.js"
+    crossorigin="anonymous"
     ></script>
-    <!--CDN FONTS-->
     <link
-      href="https://fonts.cdnfonts.com/css/helvetica-neue-5"
-      rel="stylesheet"
+    href="https://fonts.cdnfonts.com/css/helvetica-neue-5"
+    rel="stylesheet"
     />
-
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
     <!--JS-->
     <script src="script.js" defer></script>
     <!--STYLESHEET-->
     <link rel="stylesheet" href="style.css" />
+    <title>To Do List</title>
   </head>
   <body>
-      <!--TITLE-->
       <h1 class="title">callies todos</h1>
-  <!--TO DO CONTAINER-->
     <div class="container">
-  <!--ALIGN INPUT/BUTTON-->
       <form class="js-form">
-        <input class="input js-input" placeholder="What do you need to do today?" />
+        <input name="input-name" class="input js-input" placeholder="What do you need to do today?" />
       </form>
-  <!--TO DO LIST-->
         <div class="todo-container">
           <div class="todo-list js-todo-list"></div>
-  <!--DELETE BTN-->
       
         </div>
       </div>
